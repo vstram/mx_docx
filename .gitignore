@@ -12,7 +12,7 @@
 /javasource/*/proxies/
 /javasource/system/
 /**/node_modules/
-!/javascriptsource/**/node_modules/
+/javascriptsource/**/node_modules/
 /nativemobile/builds/
 /vendorlib/temp/
 .DS_Store

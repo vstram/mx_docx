@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@faker-js/faker": "^9.2.0"
+  },
+  "dependencies": {
+    "docx": "^9.0.3"
   }
 }

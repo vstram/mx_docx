@@ -14,11 +14,24 @@ import { faker } from '@faker-js/faker';
 
 /**
  * @param {Big} count
- * @returns {Promise.<MxObject[]>}
+ * @returns {Promise.<string>}
  */
 export async function JSA_Person_CreateNFakePersons(count) {
 	// BEGIN USER CODE
-	const randomName = faker.person.fullName(); 
-	console.log(randomName);
+	const fakePersonList = [];
+
+	for(var it = 0; it < count; it++){
+		fakePersonList.push({
+			firstName: faker.person.firstName(),
+			lastName: faker.person.lastName(),
+			gender: faker.person.sex(),
+			jobTitle: faker.person.jobTitle(),
+			age: faker.number.int({ min: 18, max: 68 })
+		});
+	}
+	let fakePersonListAsJson = JSON.stringify(fakePersonList);
+	console.info(fakePersonListAsJson);
+	return fakePersonListAsJson;
+	
 	// END USER CODE
 }
